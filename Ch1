@@ -1,0 +1,147 @@
+1. what is programming language?
+a system of statement used to manipulate a computer - input, manipulate, output
+2. OOP?
+1.
+wkb,wks, a range of cells
+eg: car
+properties, descriptive items: model, color, year, price
+methods, actions performed : start, drive, park
+events, things that can happen to a car: on_start
+
+
+2. 
+Object:
+1. application object
+the top level for an instance of Excel
+properties: version, caption, default file path, workbooks collection
+methods: calculate, checkspelling, quit
+events: sheetCalculate, NewWorkbook, workbookbeforeclose
+2. workbook object:
+properties:name, sheet, saved
+methods: close, printout, save
+event: beforeclose, newsheet, beforesave
+3. worksheet object( worksheet, chartsheet):
+properties: name, usedrange, visible,
+methods: activate, copy, delete
+event: active, deactivate, change
+
+3.
+key stroke:
+cntr + r: project explorer
+this workbook-event handler
+f2: object browser
+cntr + p: print
+f5: run
+f5: walk through a subroutine one step at a time
+right click module name to share/ export 
+file/input
+tools - vba project -rename : easy to maintain
+                    -protect: set password. extreme strong. 
+insert - module 
+change module name in properties. down left. properties window( F4)
+do not rename the builtin worksheet or this workbook modules, these are used exclusively for events.
+worksheets code module name and worksheetsname are different
+note: we should keep different subroutines in different code modules. e.g. fomatting, data manipulation 
+
+5.
+procedure: subroutine, functions
+functions return a value, subroutines do not
+
+excel convention: use the function's name as the variable to which we assign the calculation's results
+
+6
+public(default), private: scope of the macro
+if macro alters or deletes data, private it! to ensure that it does not delete content by accident
+add comments for sucessors/ for different attempts
+
+7
+run a macro:
+f5
+macro dialogue
+link it to a shape in the body of the workbook
+custom a quick acess toolbar at the top of the menu
+
+8.
+case 1: interaction with pivot table:
+1. click on another sheet to activate the pivot table sheet
+2. options -> clear all the contents
+
+9.
+help -> data type summary
+currency data type: 4 digit to the left
+assign integer or long as data type for integers
+
+10.
+dim (dimension): declare a variable
+option explixit: force to define each variable
+square botton to reset module, end debugging
+
+11.
+variable scope/visibility
+local variables are visible under each subroutine
+global variables can be declared in the decoration section, but cannot be assigned a certain value
+useful when the same variables appear in different subroutine
+be careful if many variables under different subroutines share the same name
+
+12.
+define static variables (instead of dim keyword) or constant to create variables that hold the values until the workbook is closed
+the variable is incremented every time the subroutine runs
+
+we cannot make a static global variable, but we can walk around it by creating a subroutine that is 
+called from within another subroutines
+
+13.
+operators
+^raise the value to the exponent
+round(value, 2) round off the value to two decimal places
+decimal division: /, allows the remainder
+integer division: \, discards the remainder 
+modular division: mod, keeps the remainder only
+
+14
+populate an array: 
+read the values from worksheet cells
+define array as variant, and write values into the array =array('','','',...)
+dynamic array: [redim preserve] reads dimension from input (needs to substract 1 from the user input)
+arrays help to maintain and look up data quickly without having to manipulate the worksheet
+maintaining the values in the worksheet speed up programming execution and simplifies the programming jobs significantly
+
+15.
+object variables: workbook, worksheet, cellrange
+eg: set wkb = thisworkbook.worksheets("...")
+makes code compact and easier to understand
+
+16:
+with:
+eg: 
+sub makebig():
+  range("a1").select
+  with selection.font
+    .name = "Cambria"
+    .size = "18"
+  end with
+end sub
+
+
+17. for each control variables must be variant
+
+18. pay attention to the structure of " if...then...elseif...then" statement
+[case is] is more efficient
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
