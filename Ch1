@@ -128,6 +128,31 @@ end sub
 18. pay attention to the structure of " if...then...elseif...then" statement
 [case is] is more efficient
 
+19. error handling
+on error( go to 0/ go to handler 1, which needs to be put after exit sub/ resume next)
+
+f8 run through, useful to find error or the original programmer construct the code logic 
+end it without stepping through the rest: reset; otherwise f5
+step over:shift + f8
+step out: finish called subroutines, go back to the main subroutine- ctrl+shift+f8
+
+run code to the breakpoint: f5
+breakpoints are extremely useful to know what values are assigned to each variable when hovering the mouse pointer over them.
+
+msgbox can verify excel outputs. Immediate window bypasses it and still get feedback on codes.
+
+view immediate window: cntr + g
+? [variable name]
+debug print: send output to the immediate window
+or debug -> [watch] in combination with breakpoints/f5
+
+application.worksheetfunction.[...] contains most of the worksheet functions so that we don't need to create our own subroutines.
+
+yes/cancel deliver the values of 1 and 2.
+
+
+
+
 
 
 
