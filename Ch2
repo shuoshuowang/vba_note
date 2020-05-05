@@ -1,0 +1,7 @@
+1. "get" allows us to assign value to a property.it reads outside a particular class and pulls value in 
+2. "let" takes an existing value and writes it out. It takes value from inside the class, and push it out to another variable.
+3. use "set" keyword to create an object variable (instance) of a new class
+  e.g. set objC= New CCostumer
+4. Dir: a built-in function to look for the directory of a specific file.
+5. workbooks.open := "(directory &)filename"
+open method of workbook objects (a collection of open workbooks)
